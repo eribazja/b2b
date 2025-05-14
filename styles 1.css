@@ -1,0 +1,132 @@
+
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center center/cover;
+  color: white;
+  overflow-x: hidden;
+}
+.overlay {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 1;
+}
+.container {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 60px 20px;
+}
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  animation: fadeInDown 1s ease-out;
+}
+.subtitle {
+  font-size: 20px;
+  margin-bottom: 40px;
+  animation: fadeInDown 1.5s ease-out;
+}
+.login-form {
+  max-width: 400px;
+  margin: 0 auto 60px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  animation: fadeInUp 2s ease-out;
+}
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+.form-group input {
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.form-group input:focus {
+  outline: none;
+  background: #eef;
+}
+.submit-btn {
+  width: 100%;
+  background: #ff9800;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.submit-btn:hover {
+  background: #e68900;
+}
+.features {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 12px;
+  animation: fadeIn 2.5s ease-in-out;
+}
+.features h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.features ul {
+  list-style-type: none;
+  padding: 0;
+}
+.features ul li {
+  margin-bottom: 16px;
+  line-height: 1.6;
+  position: relative;
+  padding-left: 24px;
+}
+.features ul li::before {
+  content: "✓";
+  color: #00e676;
+  position: absolute;
+  left: 0;
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (max-width: 600px) {
+  .title { font-size: 36px; }
+  .features { padding: 20px; }
+}
